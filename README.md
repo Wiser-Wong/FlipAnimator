@@ -5,7 +5,6 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-
     <FrameLayout
         android:id="@+id/flBack"
         android:layout_width="match_parent"
@@ -15,9 +14,9 @@
         android:id="@+id/flFront"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
-</FrameLayout>`
+</FrameLayout>
 
-`@Override protected void onCreate(Bundle savedInstanceState) {
+@Override protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
 
@@ -36,7 +35,7 @@
 		super.onDestroy();
 	}`
   
-  FrontFragment:
+  FrontFragment:  
   `@Nullable @Override public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
 		View view = inflater.inflate(R.layout.frg_front, container, false);
 		view.setClickable(true);
@@ -52,10 +51,9 @@
 			}
 		});
 		return view;
-	}`
-  
-  BackFragment:
-  `@Nullable @Override public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+	}
+  BackFragment:  
+  @Nullable @Override public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
 
 		View view = inflater.inflate(R.layout.frg_back, container, false);
 		view.setClickable(true);
@@ -71,4 +69,4 @@
 			}
 		});
 		return view;
-	}`
+	}
