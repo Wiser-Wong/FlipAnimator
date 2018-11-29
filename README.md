@@ -1,19 +1,19 @@
 # FlipAnimator
 ### 两个Fragment上下左右翻转切换动画 
-`<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"  
+    <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"  
     android:layout_width="match_parent"  
     android:layout_height="match_parent">  
-    <FrameLayout  
-        android:id="@+id/flBack"   
-	android:layout_width="match_parent"  
-	android:layout_height="match_parent" />  
-    <FrameLayout  
-        android:id="@+id/flFront"  
-	android:layout_width="match_parent"  
-	android:layout_height="match_parent" />  
- </FrameLayout>`
+        <FrameLayout  
+            android:id="@+id/flBack"   
+	    android:layout_width="match_parent"  
+	    android:layout_height="match_parent" />  
+       <FrameLayout  
+            android:id="@+id/flFront"  
+	    android:layout_width="match_parent"  
+	    android:layout_height="match_parent" />  
+    </FrameLayout>`
 
-`@Override protected void onCreate(Bundle savedInstanceState) {
+    @Override protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
 
@@ -26,13 +26,14 @@
 		getSupportFragmentManager().beginTransaction().replace(R.id.flFront, new FrontFragment()).commit();
 		getSupportFragmentManager().beginTransaction().replace(R.id.flBack, new BackFragment()).commit();
 	}
-@Override protected void onDestroy() {
+    @Override protected void onDestroy() {
 		FlipManage.with().destroyFlipManage();
 		super.onDestroy();
-}
+    }
   
-  FrontFragment:  
-  @Nullable @Override public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+#### FrontFragment:  
+     @Nullable @Override public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable      
+     Bundle savedInstanceState) {
 		View view = inflater.inflate(R.layout.frg_front, container, false);
 		view.setClickable(true);
 		tvFront = view.findViewById(R.id.tv_front);
@@ -48,8 +49,9 @@
 		});
 		return view;
 	}
-  BackFragment:  
-  @Nullable @Override public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+#### BackFragment:  
+    @Nullable @Override public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable  
+    Bundle savedInstanceState) {
 
 		View view = inflater.inflate(R.layout.frg_back, container, false);
 		view.setClickable(true);
@@ -60,7 +62,7 @@
 
 			@Override public void onClick(View view) {
 				//启动翻转动画
-//				FlipManage.with().startFlipAnimLR();
+    //				FlipManage.with().startFlipAnimLR();
 				FlipManage.with().startFlipAnimTB();
 			}
 		});
