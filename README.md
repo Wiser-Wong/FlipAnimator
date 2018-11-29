@@ -1,7 +1,7 @@
 # FlipAnimator
 两个Fragment上下左右翻转切换动画
 
-<?xml version="1.0" encoding="utf-8"?>
+`<?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
@@ -15,9 +15,9 @@
         android:id="@+id/flFront"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
-</FrameLayout>
+</FrameLayout>`
 
-@Override protected void onCreate(Bundle savedInstanceState) {
+`@Override protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
 
@@ -34,10 +34,10 @@
   @Override protected void onDestroy() {
 		FlipManage.with().destroyFlipManage();
 		super.onDestroy();
-	}
+	}`
   
   FrontFragment:
-  @Nullable @Override public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+  `@Nullable @Override public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
 		View view = inflater.inflate(R.layout.frg_front, container, false);
 		view.setClickable(true);
 		tvFront = view.findViewById(R.id.tv_front);
@@ -52,10 +52,10 @@
 			}
 		});
 		return view;
-	}
+	}`
   
   BackFragment:
-  @Nullable @Override public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+  `@Nullable @Override public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
 
 		View view = inflater.inflate(R.layout.frg_back, container, false);
 		view.setClickable(true);
@@ -71,4 +71,4 @@
 			}
 		});
 		return view;
-	}
+	}`
