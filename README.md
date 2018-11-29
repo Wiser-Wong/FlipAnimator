@@ -1,18 +1,18 @@
 # FlipAnimator
 ### 两个Fragment上下左右翻转切换动画
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+`<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
-    <FrameLayout
+    android:layout_height="match_parent">`
+    `<FrameLayout
         android:id="@+id/flBack"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="match_parent" />`
 
-    <FrameLayout
+    `<FrameLayout
         android:id="@+id/flFront"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
-</FrameLayout>`
+        android:layout_height="match_parent" />`
+`</FrameLayout>`
 
 @Override protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
