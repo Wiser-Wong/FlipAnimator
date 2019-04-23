@@ -2,7 +2,7 @@
 
 ## 截图
 
-![images](https://github.com/Wiser-Wong/BookDemo/blob/master/images/book.gif)
+![images](https://github.com/Wiser-Wong/FlipAnimator/blob/master/images/flip.gif)
 
 ##  使用说明
 ### 两个Fragment上下左右翻转切换动画 
