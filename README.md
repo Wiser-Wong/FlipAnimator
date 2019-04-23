@@ -1,4 +1,10 @@
 # FlipAnimator
+
+## 截图
+
+![images](https://github.com/Wiser-Wong/BookDemo/blob/master/images/book.gif)
+
+##  使用说明
 ### 两个Fragment上下左右翻转切换动画 
     <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"  
     android:layout_width="match_parent"  
